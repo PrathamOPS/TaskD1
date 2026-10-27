@@ -1,0 +1,237 @@
+.post-page {
+  min-height: 75vh;
+  padding: 55px 6%;
+  background: #f4f6f9;
+  box-sizing: border-box;
+  color: #172033;
+}
+
+/* Main layout */
+
+.post-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Introduction */
+
+.post-container > h1 {
+  position: relative;
+  margin: 0;
+  padding-top: 20px;
+  color: #111a2e;
+  font-size: clamp(34px, 4vw, 48px);
+  font-weight: 800;
+  letter-spacing: -1.8px;
+  text-align: left;
+}
+
+.post-container > h1::before {
+  content: "CREATE SOMETHING";
+  display: block;
+  margin-bottom: 14px;
+  color: #079b9f;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.post-intro {
+  max-width: 600px;
+  margin: 12px 0 35px;
+  color: #727b8b;
+  font-size: 15px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+/* Form panel */
+
+.post-container form {
+  position: relative;
+  max-width: 760px;
+  padding: 38px;
+  background: #ffffff;
+  border: 1px solid #e5e9f0;
+  border-radius: 12px;
+  box-shadow: 0 12px 35px rgba(20, 32, 55, 0.045);
+}
+
+/* Question and Article selectors */
+
+.post-type-selector {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 32px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.type-button {
+  min-width: 125px;
+  padding: 12px 22px;
+  border: 1px solid #e0e5ec;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #667085;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.type-button:hover {
+  border-color: #079b9f;
+  color: #087f83;
+}
+
+.type-button.active {
+  border-color: #111a2e;
+  background: #111a2e;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(17, 26, 46, 0.12);
+}
+
+/* Form fields */
+
+.post-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.post-field label {
+  margin-bottom: 10px;
+  color: #1b2538;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.post-field input,
+.post-field textarea {
+  width: 100%;
+  padding: 14px 15px;
+  border: 1px solid #e0e5ec;
+  border-radius: 6px;
+  outline: none;
+  background: #fafbfd;
+  color: #172033;
+  font-family: inherit;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: 0.2s ease;
+}
+
+.post-field input::placeholder,
+.post-field textarea::placeholder {
+  color: #a0a8b5;
+}
+
+.post-field input:focus,
+.post-field textarea:focus {
+  border-color: #079b9f;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(7, 155, 159, 0.09);
+}
+
+.post-field textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.7;
+}
+
+.post-field input[aria-invalid="true"],
+.post-field textarea[aria-invalid="true"] {
+  border-color: #d93025;
+  background: #fffafa;
+}
+
+.post-field small {
+  margin-top: 9px;
+  color: #929aaa;
+  font-size: 12px;
+}
+
+.field-error {
+  margin-top: 8px;
+  color: #d93025;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Submit button */
+
+.submit-post-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 49px;
+  margin-top: 8px;
+  padding: 14px 20px;
+  border: 1px solid #111a2e;
+  border-radius: 6px;
+  background: #111a2e;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.submit-post-button:hover {
+  border-color: #079b9f;
+  background: #079b9f;
+  box-shadow: 0 5px 14px rgba(7, 155, 159, 0.18);
+}
+
+/* Responsive layout */
+
+@media (max-width: 768px) {
+  .post-page {
+    padding: 35px 20px 50px;
+  }
+
+  .post-container > h1 {
+    font-size: 36px;
+  }
+
+  .post-container form {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-page {
+    padding: 25px 14px 40px;
+  }
+
+  .post-container > h1 {
+    font-size: 32px;
+    letter-spacing: -1px;
+  }
+
+  .post-intro {
+    font-size: 14px;
+  }
+
+  .post-type-selector {
+    gap: 8px;
+  }
+
+  .type-button {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 10px;
+  }
+
+  .post-container form {
+    padding: 22px 16px;
+  }
+}
+.post-success{padding:12px 14px;border-radius:8px;background:#e8f7ee;color:#17683b;margin:0 0 16px}.submit-post-button:disabled{opacity:.6;cursor:wait}
